@@ -1,0 +1,33 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+# Configuration de la langue
+locale: "fr"
+
+# Configuration des contenus
+collections:
+  - name: "podcast"
+    label: "🎙️ Épisodes Podcast"
+    folder: "podcasts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Titre de l'épisode", name: "title", widget: "string"}
+      - {label: "Date de publication", name: "date", widget: "datetime"}
+      - {label: "Description", name: "body", widget: "markdown"}
+      - {label: "Fichier Audio (MP3)", name: "audio", widget: "file", required: false}
+      - {label: "Image de couverture", name: "thumbnail", widget: "image", required: false}
+
+  - name: "blog"
+    label: "📝 Articles de Blog"
+    folder: "blog"
+    create: true
+    fields:
+      - {label: "Titre", name: "title", widget: "string"}
+      - {label: "Date", name: "date", widget: "datetime"}
+      - {label: "Contenu", name: "body", widget: "markdown"}
+      - {label: "Lier à un épisode ?", name: "linked_episode", widget: "relation", collection: "podcast", search_fields: ["title"], value_field: "title", required: false}
