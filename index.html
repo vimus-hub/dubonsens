@@ -1,15 +1,19 @@
+---
+layout: null
+---
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DU BON SENS - Mouvement de Démocratie Participative</title>
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     <style>
         /* Design Minimaliste - Bleu Foncé & Gris */
         :root {
-            --primary: #1a2533; /* Bleu nuit profond */
-            --accent: #2c3e50; /* Gris bleuté */
-            --light: #f4f6f8;   /* Gris très clair pour le fond */
+            --primary: #1a2533;
+            --accent: #2c3e50;
+            --light: #f4f6f8;
             --white: #ffffff;
             --text: #333333;
         }
@@ -23,7 +27,6 @@
             line-height: 1.6;
         }
 
-        /* En-tête / Bannière */
         header {
             background-color: var(--primary);
             color: var(--white);
@@ -45,14 +48,12 @@
             font-weight: 300;
         }
 
-        /* Conteneur principal */
         .container {
             max-width: 800px;
             margin: 0 auto;
             padding: 2rem 1rem;
         }
 
-        /* Section Intro */
         .intro {
             background: var(--white);
             padding: 2rem;
@@ -77,7 +78,6 @@
             background-color: var(--accent);
         }
 
-        /* Section Podcasts */
         h2 {
             color: var(--primary);
             border-bottom: 2px solid #dde1e6;
@@ -85,6 +85,7 @@
             margin-top: 3rem;
         }
 
+        /* Styles des articles */
         .podcast-item {
             background: var(--white);
             margin-bottom: 1.5rem;
@@ -104,8 +105,12 @@
             margin: 0 0 10px 0;
             color: var(--primary);
         }
+        
+        .podcast-desc {
+            font-size: 1rem;
+            color: var(--text);
+        }
 
-        /* Footer */
         footer {
             text-align: center;
             padding: 2rem;
@@ -115,7 +120,6 @@
             margin-top: 3rem;
         }
     </style>
-<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
 
@@ -129,23 +133,33 @@
             <h3>Bienvenue</h3>
             <p>Bienvenue dans DU BON SENS, le podcast qui redonne la parole à ceux qu’on n’écoute plus. Entre les directives de technocrates non élus à Bruxelles et l'érosion de nos libertés, il est temps de se demander : sommes-nous encore réellement souverains ?</p>
             <p>En s’inspirant du modèle de démocratie directe suisse, explorons ensemble comment reprendre les rênes de notre destin pour que le citoyen belge redevienne le seul véritable décideur.</p>
-            <a href="#" class="btn-blog">Voir le Blog & Articles</a>
+            <a href="/blog" class="btn-blog">Voir le Blog & Articles</a>
         </section>
 
         <section>
             <h2>Derniers Épisodes</h2>
             
+            {% for podcast in site.podcasts reversed %}
             <article class="podcast-item">
-                <div class="podcast-meta">Épisode 1 • 25 Janvier 2026</div>
-                <h3 class="podcast-title">La Souveraineté Numérique</h3>
-                <p>Un exemple de ce à quoi ressemblera votre premier épisode publié. Le lecteur audio s'affichera ici.</p>
-                <audio controls style="width: 100%; margin-top: 10px;">
-                    <source src="" type="audio/mpeg">
+                <div class="podcast-meta">
+                    Publié le {{ podcast.date | date: "%d/%m/%Y" }}
+                </div>
+                
+                <h3 class="podcast-title">{{ podcast.title }}</h3>
+                
+                <div class="podcast-desc">
+                    {{ podcast.description }}
+                </div>
+
+                {% if podcast.audio %}
+                <audio controls style="width: 100%; margin-top: 15px;">
+                    <source src="{{ podcast.audio }}" type="audio/mpeg">
                     Votre navigateur ne supporte pas l'audio.
                 </audio>
+                {% endif %}
             </article>
-
-        </section>
+            {% endfor %}
+            </section>
     </div>
 
     <footer>
