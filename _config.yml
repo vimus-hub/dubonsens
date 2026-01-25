@@ -1,0 +1,14 @@
+title: "Du Bon Sens"
+url: "https://dubonsens.netlify.app" # Nous changerons ça plus tard pour votre .com
+
+# Configuration des collections (Podcasts et Blog)
+collections:
+  podcasts:
+    output: true
+    permalink: /podcasts/:slug/
+  blog:
+    output: true
+    permalink: /blog/:slug/
+
+# Pour que Jekyll comprenne où chercher (car le CMS écrit dans "podcasts" et pas "_podcasts")
+collections_dir: .
