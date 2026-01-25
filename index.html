@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DU BON SENS - Mouvement de Démocratie Participative</title>
+    <style>
+        /* Design Minimaliste - Bleu Foncé & Gris */
+        :root {
+            --primary: #1a2533; /* Bleu nuit profond */
+            --accent: #2c3e50; /* Gris bleuté */
+            --light: #f4f6f8;   /* Gris très clair pour le fond */
+            --white: #ffffff;
+            --text: #333333;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--light);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        /* En-tête / Bannière */
+        header {
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 3rem 1rem;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .tagline {
+            font-size: 1.1rem;
+            color: #bdc3c7;
+            margin-top: 10px;
+            font-weight: 300;
+        }
+
+        /* Conteneur principal */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        /* Section Intro */
+        .intro {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            margin-bottom: 2rem;
+            border-left: 5px solid var(--primary);
+        }
+
+        .btn-blog {
+            display: inline-block;
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 4px;
+            margin-top: 1rem;
+            font-weight: bold;
+        }
+        
+        .btn-blog:hover {
+            background-color: var(--accent);
+        }
+
+        /* Section Podcasts */
+        h2 {
+            color: var(--primary);
+            border-bottom: 2px solid #dde1e6;
+            padding-bottom: 10px;
+            margin-top: 3rem;
+        }
+
+        .podcast-item {
+            background: var(--white);
+            margin-bottom: 1.5rem;
+            padding: 1.5rem;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .podcast-meta {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 0.5rem;
+        }
+
+        .podcast-title {
+            font-size: 1.3rem;
+            margin: 0 0 10px 0;
+            color: var(--primary);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background-color: var(--primary);
+            color: #7f8c8d;
+            font-size: 0.8rem;
+            margin-top: 3rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Du Bon Sens</h1>
+        <div class="tagline">Mouvement de Démocratie Participative Citoyen Belge</div>
+    </header>
+
+    <div class="container">
+        <section class="intro">
+            <h3>Bienvenue</h3>
+            <p>Bienvenue dans DU BON SENS, le podcast qui redonne la parole à ceux qu’on n’écoute plus. Entre les directives de technocrates non élus à Bruxelles et l'érosion de nos libertés, il est temps de se demander : sommes-nous encore réellement souverains ?</p>
+            <p>En s’inspirant du modèle de démocratie directe suisse, explorons ensemble comment reprendre les rênes de notre destin pour que le citoyen belge redevienne le seul véritable décideur.</p>
+            <a href="#" class="btn-blog">Voir le Blog & Articles</a>
+        </section>
+
+        <section>
+            <h2>Derniers Épisodes</h2>
+            
+            <article class="podcast-item">
+                <div class="podcast-meta">Épisode 1 • 25 Janvier 2026</div>
+                <h3 class="podcast-title">La Souveraineté Numérique</h3>
+                <p>Un exemple de ce à quoi ressemblera votre premier épisode publié. Le lecteur audio s'affichera ici.</p>
+                <audio controls style="width: 100%; margin-top: 10px;">
+                    <source src="" type="audio/mpeg">
+                    Votre navigateur ne supporte pas l'audio.
+                </audio>
+            </article>
+
+        </section>
+    </div>
+
+    <footer>
+        &copy; 2026 Du Bon Sens. Hébergé indépendamment.
+    </footer>
+
+</body>
+</html>
