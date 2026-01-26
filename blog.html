@@ -1,0 +1,58 @@
+---
+layout: null
+---
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - DU BON SENS</title>
+    <style>
+        /* Mêmes styles que l'accueil pour la cohérence */
+        :root { --primary: #1a2533; --accent: #2c3e50; --light: #f4f6f8; --white: #ffffff; --text: #333333; }
+        body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; background-color: var(--light); color: var(--text); line-height: 1.6; margin: 0; }
+        
+        header { background-color: var(--primary); color: var(--white); padding: 2rem 1rem; text-align: center; }
+        h1 { margin: 0; font-size: 2rem; text-transform: uppercase; }
+        
+        .nav-link { color: #bdc3c7; text-decoration: none; font-size: 0.9rem; margin-top: 10px; display: inline-block; }
+        .nav-link:hover { color: var(--white); text-decoration: underline; }
+
+        .container { max-width: 800px; margin: 0 auto; padding: 2rem 1rem; }
+        
+        .blog-item { background: var(--white); margin-bottom: 1.5rem; padding: 2rem; border-radius: 4px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+        .blog-date { color: #888; font-size: 0.9rem; margin-bottom: 0.5rem; }
+        .blog-title { color: var(--primary); margin-top: 0; }
+        
+        .btn-action { display: inline-block; background-color: var(--accent); color: var(--white); padding: 8px 15px; text-decoration: none; border-radius: 4px; margin-top: 15px; font-size: 0.9rem; }
+        .btn-action:hover { background-color: var(--primary); }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Le Blog Citoyen</h1>
+        <a href="/" class="nav-link">← Retour à l'accueil</a>
+    </header>
+
+    <div class="container">
+        {% for post in site.blog reversed %}
+        <article class="blog-item">
+            <div class="blog-date">{{ post.date | date: "%d/%m/%Y" }}</div>
+            <h2 class="blog-title">{{ post.title }}</h2>
+            
+            <div class="blog-content">
+                {{ post.description }} </div>
+
+            {% if post.linked_episode %}
+                <p>🎙️ <strong>En lien avec cet article :</strong> {{ post.linked_episode }}</p>
+            {% endif %}
+            
+        </article>
+        {% else %}
+            <p style="text-align: center; color: #666;">Aucun article pour le moment.</p>
+        {% endfor %}
+    </div>
+
+</body>
+</html>
