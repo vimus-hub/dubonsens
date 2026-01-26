@@ -12,7 +12,7 @@ locale: "fr"
 collections:
   - name: "podcast"
     label: "🎙️ Épisodes Podcast"
-    folder: "podcasts"
+    folder: "_podcasts"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
@@ -24,7 +24,7 @@ collections:
 
   - name: "blog"
     label: "📝 Articles de Blog"
-    folder: "blog"
+    folder: "_blog"
     create: true
     fields:
       - {label: "Titre", name: "title", widget: "string"}
