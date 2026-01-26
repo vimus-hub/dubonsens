@@ -9,6 +9,3 @@ collections:
   blog:
     output: true
     permalink: /blog/:slug/
-
-# Pour que Jekyll comprenne où chercher (car le CMS écrit dans "podcasts" et pas "_podcasts")
-collections_dir: .
