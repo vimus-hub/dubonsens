@@ -19,7 +19,7 @@ collections:
       - {label: "Titre de l'épisode", name: "title", widget: "string"}
       - {label: "Date de publication", name: "date", widget: "datetime"}
       - {label: "Description", name: "body", widget: "markdown"}
-      - {label: "Fichier Audio (MP3)", name: "audio", widget: "file", required: false}
+      - {label: "Fichier Audio (MP3)", name: "audio", widget: "string", required: false}
       - {label: "Image de couverture", name: "thumbnail", widget: "image", required: false}
 
   - name: "blog"
