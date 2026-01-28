@@ -9,3 +9,11 @@ collections:
   blog:
     output: true
     permalink: /blog/:slug/
+
+# Règle pour appliquer le design automatiquement
+defaults:
+  - scope:
+      path: ""
+      type: "podcasts"
+    values:
+      layout: "podcast"
