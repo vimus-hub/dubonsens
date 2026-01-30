@@ -1,0 +1,44 @@
+---
+layout: null
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>{{ site.title | xml_escape }}</title>
+    <description>{{ site.description | xml_escape }}</description>
+    <link>{{ site.url }}</link>
+    <language>fr-be</language>
+    <copyright>© {{ site.time | date: "%Y" }} {{ site.title }}</copyright>
+    <itunes:author>Vincent Musschoot</itunes:author>
+    <itunes:subtitle>{{ site.description | xml_escape }}</itunes:subtitle>
+    <itunes:summary>{{ site.description | xml_escape }}</itunes:summary>
+    <itunes:owner>
+      <itunes:name>Vincent Musschoot</itunes:name>
+      <itunes:email>contact@dubonsens.be</itunes:email>
+    </itunes:owner>
+    <itunes:image href="{{ site.url }}/assets/images/logo.jpg" />
+    <itunes:category text="Health &amp; Fitness">
+      <itunes:category text="Mental Health" />
+    </itunes:category>
+    <itunes:explicit>no</itunes:explicit>
+
+    {% for post in site.posts %}
+    {% if post.file %}
+    <item>
+      <title>{{ post.title | xml_escape }}</title>
+      <link>{{ site.url }}{{ post.url }}</link>
+      <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
+      <guid isPermaLink="true">{{ site.url }}{{ post.url }}</guid>
+      <description>{{ post.content | strip_html | truncatewords: 50 | xml_escape }}</description>
+      <itunes:author>Vincent Musschoot</itunes:author>
+      <itunes:subtitle>{{ post.description | default: post.excerpt | strip_html | truncate: 200 | xml_escape }}</itunes:subtitle>
+      <itunes:summary>{{ post.content | strip_html | truncatewords: 50 | xml_escape }}</itunes:summary>
+      <itunes:image href="{{ site.url }}/assets/images/logo.jpg" />
+      <enclosure url="{{ post.file }}" length="0" type="audio/mpeg" />
+      <itunes:duration>10:00</itunes:duration>
+      <itunes:explicit>no</itunes:explicit>
+    </item>
+    {% endif %}
+    {% endfor %}
+  </channel>
+</rss>
