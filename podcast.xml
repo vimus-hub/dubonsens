@@ -17,9 +17,11 @@ layout: null
       <itunes:email>contact@dubonsens.be</itunes:email>
     </itunes:owner>
     <itunes:image href="{{ site.url }}/assets/images/logo.jpg" />
-    <itunes:category text="Health &amp; Fitness">
-      <itunes:category text="Mental Health" />
+    
+    <itunes:category text="News">
+      <itunes:category text="Politics" />
     </itunes:category>
+    <itunes:category text="Government" />
     <itunes:explicit>no</itunes:explicit>
 
     {% for post in site.posts %}
