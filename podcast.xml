@@ -16,7 +16,7 @@ layout: null
       <itunes:name>Vincent Musschoot</itunes:name>
       <itunes:email>contact@dubonsens.be</itunes:email>
     </itunes:owner>
-    <itunes:image href="{{ site.url }}/images/logo.jpg" />
+    <itunes:image href="{{ site.url }}/images/uploads/logo.jpg" />
     
     <itunes:category text="News">
       <itunes:category text="Politics" />
@@ -35,7 +35,7 @@ layout: null
       <itunes:author>Vincent Musschoot</itunes:author>
       <itunes:subtitle>{{ post.description | default: post.excerpt | strip_html | truncate: 200 | xml_escape }}</itunes:subtitle>
       <itunes:summary>{{ post.content | strip_html | truncatewords: 50 | xml_escape }}</itunes:summary>
-      <itunes:image href="{{ site.url }}/images/logo.jpg" />
+      <itunes:image href="{{ site.url }}/images/uploads/logo.jpg" />
       <enclosure url="{{ post.file }}" length="0" type="audio/mpeg" />
       <itunes:duration>10:00</itunes:duration>
       <itunes:explicit>no</itunes:explicit>
