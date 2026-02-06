@@ -1,170 +1,74 @@
----
-layout: null
----
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DU BON SENS - Mouvement de Démocratie Participative</title>
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <title>Du Bon Sens - Le Mouvement Citoyen</title>
     <style>
-        /* Design Minimaliste - Bleu Foncé & Gris */
-        :root {
-            --primary: #1a2533;
-            --accent: #2c3e50;
-            --light: #f4f6f8;
-            --white: #ffffff;
-            --text: #333333;
-        }
-
-        body {
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: var(--light);
-            color: var(--text);
-            line-height: 1.6;
-        }
-
-        header {
-            background-color: var(--primary);
-            color: var(--white);
-            padding: 3rem 1rem;
-            text-align: center;
-        }
-
-        h1 {
-            margin: 0;
-            font-size: 2.5rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        .tagline {
-            font-size: 1.1rem;
-            color: #bdc3c7;
-            margin-top: 10px;
-            font-weight: 300;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 2rem 1rem;
-        }
-
-        .intro {
-            background: var(--white);
-            padding: 2rem;
-            border-radius: 4px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-            margin-bottom: 2rem;
-            border-left: 5px solid var(--primary);
-        }
-
-        .btn-blog {
-            display: inline-block;
-            background-color: var(--primary);
-            color: var(--white);
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 4px;
-            margin-top: 1rem;
-            font-weight: bold;
-        }
+        /* Styles simples et propres */
+        body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 0; background-color: #fff; }
+        header { background-color: #003366; color: white; padding: 40px 20px; text-align: center; }
+        header h1 { margin: 0; font-size: 2.5rem; letter-spacing: 1px; }
+        header p { font-size: 1.2rem; opacity: 0.9; margin-top: 10px; }
         
-        .btn-blog:hover {
-            background-color: var(--accent);
-        }
-
-        h2 {
-            color: var(--primary);
-            border-bottom: 2px solid #dde1e6;
-            padding-bottom: 10px;
-            margin-top: 3rem;
-        }
-
-        /* Styles des articles */
-        .podcast-item {
-            background: var(--white);
-            margin-bottom: 1.5rem;
-            padding: 1.5rem;
-            border-radius: 4px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-        }
-
-        .podcast-meta {
-            font-size: 0.9rem;
-            color: #666;
-            margin-bottom: 0.5rem;
-        }
-
-        .podcast-title {
-            font-size: 1.3rem;
-            margin: 0 0 10px 0;
-            color: var(--primary);
-        }
+        .main-container { max-width: 1000px; margin: 0 auto; padding: 40px 20px; text-align: center; }
         
-        .podcast-desc {
-            font-size: 1rem;
-            color: var(--text);
-        }
+        .grid { display: flex; flex-wrap: wrap; gap: 40px; justify-content: center; margin-top: 40px; }
+        .card { flex: 1; min-width: 300px; padding: 30px; border-radius: 10px; background: #f4f6f8; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        
+        h2 { color: #003366; margin-top: 0; }
+        .highlight { font-weight: bold; color: #d35400; }
+        
+        /* Bouton Rejoindre */
+        .btn-join { display: inline-block; background-color: #d35400; color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; font-size: 1.1rem; margin-top: 20px; transition: background 0.3s; }
+        .btn-join:hover { background-color: #e67e22; }
 
-        footer {
-            text-align: center;
-            padding: 2rem;
-            background-color: var(--primary);
-            color: #7f8c8d;
-            font-size: 0.8rem;
-            margin-top: 3rem;
-        }
+        /* Liens Podcast */
+        .podcast-section { margin-top: 60px; padding-top: 20px; border-top: 1px solid #eee; }
+        .podcast-link { color: #003366; text-decoration: none; font-weight: bold; }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>Du Bon Sens</h1>
-        <div class="tagline">Mouvement Citoyen Belge de Démocratie Participative</div>
+        <h1>DU BON SENS</h1>
+        <p>Remettons la logique au cœur de la cité.</p>
     </header>
 
-    <div class="container">
-        <section class="intro">
-            <h3>Bienvenue</h3>
-            <p>Bienvenue dans DU BON SENS, le podcast qui redonne la parole à ceux qu’on n’écoute plus. Entre les directives de technocrates non élus à Bruxelles et l'érosion de nos libertés, il est temps de se demander : sommes-nous encore réellement souverains ?</p>
-            <p>En s’inspirant du modèle de démocratie directe suisse, explorons ensemble comment reprendre les rênes de notre destin pour que le citoyen belge redevienne le seul véritable décideur.</p>
-            <a href="/blog" class="btn-blog">Voir le Blog & Articles</a>
-        </section>
+    <div class="main-container">
+        
+        <p style="font-size: 1.3rem; max-width: 700px; margin: 0 auto 40px auto;">
+            La Belgique est à la croisée des chemins. 
+            Nous ne sommes pas un parti traditionnel, nous sommes une méthode.
+            Découvrez notre vision ou rejoignez l'équipe.
+        </p>
 
-        <section>
-            <h2>Derniers Épisodes</h2>
+        <div class="grid">
             
-            {% for podcast in site.podcasts reversed %}
-            <article class="podcast-item">
-                <div class="podcast-meta">
-                    Publié le {{ podcast.date | date: "%d/%m/%Y" }}
-                </div>
+            <div class="card">
+                <h2>1. Comprendre</h2>
+                <p>Téléchargez gratuitement notre <span class="highlight">Manifeste du Bon Sens</span> (PDF).<br>
+                Découvrez les constats et les solutions concrètes.</p>
                 
-                <h3 class="podcast-title">{{ podcast.title }}</h3>
-                
-                <div class="podcast-desc">
-                    {{ podcast.description }}
+                <iframe width="100%" height="305" src="https://3def3a67.sibforms.com/serve/MUIFAGFXeOAmBLg5tmZZmpa0ge3pU7MJx7KxA2WrStyH2PbT9yMCspd9ln4Bss-gaBaUwOBHGguulKHIQUZ3blFqTR4LXsMWEPnO_d9FCo1o3GBdh351FnNTxK2kwNxsoC3n3Z1jRKv-hADORCnAXT69g1WwaL09hYMBfLlc7sFEPhP-XEnltpxXPMYmvQaHITZeHYUl9Z0z0emRdg==" frameborder="0" scrolling="auto" allowfullscreen style="display: block;margin-left: auto;margin-right: auto;max-width: 100%;"></iframe>
                 </div>
 
-                {% if podcast.audio %}
-                <audio controls style="width: 100%; margin-top: 15px;">
-                    <source src="{{ podcast.audio }}" type="audio/mpeg">
-                    Votre navigateur ne supporte pas l'audio.
-                </audio>
-                {% endif %}
-            </article>
-            {% endfor %}
-            </section>
+            <div class="card">
+                <h2>2. Agir</h2>
+                <p>Vous avez déjà lu le Manifeste ?<br>
+                Vous partagez notre vision et voulez aider ?<br>
+                Devenez membre officiel.</p>
+                <br>
+                <a href="rejoindre.html" class="btn-join">JE REJOINS LE MOUVEMENT →</a>
+            </div>
+            
+        </div>
+
+        <div class="podcast-section">
+            <p>Retrouvez également nos réflexions audio sur le <a href="podcast.html" class="podcast-link">Podcast Du Bon Sens</a>.</p>
+        </div>
+
     </div>
-
-    <footer>
-        &copy; 2026 Du Bon Sens. Hébergé indépendamment.
-    </footer>
 
 </body>
 </html>
